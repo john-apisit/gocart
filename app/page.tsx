@@ -1,15 +1,15 @@
-import Banner from "@/components/home/Banner";
+import Banner from "@/features/home/Banner";
+import SubscribeNow from "@/features/home/SubscribeNow";
+import FeaturedProducts from "@/features/products/FeaturedProducts";
+import PopularProducts from "@/features/products/PopularProducts";
 
 const HomePage = () => {
   return (
     <div className="min-h-screen max-w-5xl mx-auto">
       <Banner />
-
-      {/* Popular Products */}
-
-      {/* Featured Products */}
-
-      {/* Subscribe Now */}
+      <PopularProducts />
+      <FeaturedProducts />
+      <SubscribeNow />
     </div>
   );
 };

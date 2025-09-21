@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "motion/react";
+import AppButton from "../../components/buttons/AppButton";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
+  const router = useRouter();
   return (
     <div className="relative py-4">
       <Image
@@ -32,15 +34,19 @@ const Banner = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
           quos.
         </motion.p>
-        <motion.a
-          href="/shop"
-          className="bg-orange-600 hover:bg-orange-500 transition-all duration-100 cursor-pointer text-white px-4 py-2 rounded-md "
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
         >
-          Shop Now
-        </motion.a>
+          <AppButton
+            label="Shop Now"
+            onClick={() => {
+              router.push("/shop");
+            }}
+            size="md"
+          />
+        </motion.div>
       </div>
     </div>
   );

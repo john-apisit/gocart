@@ -3,14 +3,23 @@
 import { User } from "lucide-react";
 import { useState } from "react";
 import ShoppingCartIcon from "../carts/ShoppingCartIcon";
-import SearchInput from "../common/inputs/SearchInput";
+import SearchInput from "../../components/inputs/SearchInput";
+import { useRouter } from "next/navigation";
 
 const UserMenu = () => {
   const [searchText, setSearchText] = useState("");
+  const router = useRouter();
 
   return (
     <div className="flex items-center gap-4 text-gray-400">
-      <SearchInput onSearch={setSearchText} />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          router.push(`/shop?search=${searchText}`);
+        }}
+      >
+        <SearchInput searchText={searchText} onSearch={setSearchText} />
+      </form>
       <ShoppingCartIcon />
 
       {/* User Actions */}

@@ -1,7 +1,14 @@
+"use client";
 import { Search } from "lucide-react";
 import { useRef, useState } from "react";
 
-const SearchInput = ({ onSearch }: { onSearch: (value: string) => void }) => {
+const SearchInput = ({
+  searchText,
+  onSearch,
+}: {
+  searchText: string;
+  onSearch: (value: string) => void;
+}) => {
   const [showSearch, setShowSearch] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
   return (
@@ -10,6 +17,7 @@ const SearchInput = ({ onSearch }: { onSearch: (value: string) => void }) => {
         ref={searchInputRef}
         type="text"
         placeholder="Search..."
+        value={searchText}
         onChange={(e) => onSearch(e.target.value)}
         className={`outline-none ring-2 ring-gray-200 rounded-md py-1 px-2 transition-all duration-300 ease-in-out ${
           showSearch ? "opacity-100 w-48" : "opacity-0 w-0"

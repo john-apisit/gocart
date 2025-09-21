@@ -2,8 +2,8 @@
 
 import { User } from "lucide-react";
 import { useState } from "react";
-import SearchInput from "./inputs/SearchInput";
 import ShoppingCartIcon from "../carts/ShoppingCartIcon";
+import SearchInput from "../common/inputs/SearchInput";
 
 const UserMenu = () => {
   const [searchText, setSearchText] = useState("");

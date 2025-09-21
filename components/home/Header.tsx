@@ -7,7 +7,7 @@ const Header = () => {
     <div className="border-b-2 border-gray-200">
       <div className="flex justify-between items-center max-w-5xl mx-auto py-4">
         <div>
-          <Image src="/logo/J Shop.png" alt="J Shop" width={100} height={100} />
+          <Image src="/logo/J Shop.png" alt="J Shop" width={100} height={33} />
         </div>
         <TopMenu />
         <UserMenu />

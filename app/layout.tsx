@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "GoCart - Online Shopping",
+  title: "J Shop - Online Shopping",
   description: "Online Shopping",
 };
 

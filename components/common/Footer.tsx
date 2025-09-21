@@ -38,13 +38,13 @@ const Footer = () => {
         <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto py-8 ">
           <div className="col-span-2 space-y-4">
             <Image
-              src="/logo/GoCart.png"
-              alt="GoCart"
+              src="/logo/J Shop.png"
+              alt="J Shop"
               width={100}
               height={100}
             />
             <p className="text-gray-500">
-              GoCart is a platform for buying and selling products online.
+              J Shop is a platform for buying and selling products online.
             </p>
           </div>
           {/* Company Menu */}
@@ -72,7 +72,7 @@ const Footer = () => {
 
       {/* Copy Right */}
       <div className="flex items-center justify-center text-gray-400 text-sm py-4">
-        <p>Copyright 2025 GoCart. All rights reserved.</p>
+        <p>Copyright 2025 J Shop. All rights reserved.</p>
       </div>
     </div>
   );

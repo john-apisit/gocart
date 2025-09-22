@@ -63,7 +63,7 @@ export const mockProducts: Product[] = [
     description: "Slim leather wallet with multiple compartments.",
     price: 39.99,
     category: "Accessories",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Brown", "Black"],
 
     image: [
@@ -79,7 +79,7 @@ export const mockProducts: Product[] = [
     description: "Wireless over-ear headphones with noise cancellation.",
     price: 129.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Silver"],
 
     image: [
@@ -95,7 +95,7 @@ export const mockProducts: Product[] = [
     description: "Feature-rich smartwatch with fitness tracking.",
     price: 19900.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Silver", "Rose Gold"],
 
     image: [
@@ -143,7 +143,7 @@ export const mockProducts: Product[] = [
     description: "Mechanical keyboard with RGB lighting.",
     price: 89.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black"],
 
     image: [
@@ -159,7 +159,7 @@ export const mockProducts: Product[] = [
     description: "Ergonomic office chair with lumbar support.",
     price: 149.99,
     category: "Furniture",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Gray"],
 
     image: [
@@ -207,7 +207,7 @@ export const mockProducts: Product[] = [
     description: "Rechargeable toothbrush with multiple cleaning modes.",
     price: 59.99,
     category: "Personal Care",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["White", "Blue"],
 
     image: [
@@ -226,7 +226,7 @@ export const mockProducts: Product[] = [
     description: "Compact and powerful hair dryer with ionic technology.",
     price: 45.99,
     category: "Personal Care",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Pink"],
 
     image: [
@@ -242,7 +242,7 @@ export const mockProducts: Product[] = [
     description: "Ergonomic wireless mouse with adjustable DPI.",
     price: 24.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Gray"],
 
     image: [
@@ -258,7 +258,7 @@ export const mockProducts: Product[] = [
     description: "Spacious waterproof backpack for travel and work.",
     price: 69.99,
     category: "Accessories",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Blue", "Green"],
 
     image: [
@@ -274,7 +274,7 @@ export const mockProducts: Product[] = [
     description: "UV400 polarized sunglasses for outdoor activities.",
     price: 29.99,
     category: "Accessories",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Brown"],
 
     image: [
@@ -290,7 +290,7 @@ export const mockProducts: Product[] = [
     description: "Compact digital camera with 20MP lens.",
     price: 249.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Silver"],
 
     image: [
@@ -306,7 +306,7 @@ export const mockProducts: Product[] = [
     description: "Portable waterproof Bluetooth speaker with deep bass.",
     price: 59.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Blue", "Red"],
 
     image: [
@@ -322,7 +322,7 @@ export const mockProducts: Product[] = [
     description: "LED desk lamp with adjustable brightness.",
     price: 34.99,
     category: "Home & Living",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["White", "Black"],
 
     image: [
@@ -338,7 +338,7 @@ export const mockProducts: Product[] = [
     description: "Professional stainless steel kitchen knife set.",
     price: 89.99,
     category: "Home & Kitchen",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Silver"],
 
     image: [
@@ -386,7 +386,7 @@ export const mockProducts: Product[] = [
     description: "Durable sports watch with stopwatch and waterproof design.",
     price: 59.99,
     category: "Accessories",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Blue"],
 
     image: [
@@ -418,7 +418,7 @@ export const mockProducts: Product[] = [
     description: "10,000mAh fast-charging portable power bank.",
     price: 39.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "White"],
 
     image: [
@@ -434,7 +434,7 @@ export const mockProducts: Product[] = [
     description: "Automatic drip coffee maker with timer function.",
     price: 79.99,
     category: "Home & Kitchen",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "Silver"],
 
     image: [
@@ -450,7 +450,7 @@ export const mockProducts: Product[] = [
     description: "Smart vacuum cleaner with app control.",
     price: 249.99,
     category: "Home & Living",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["White", "Black"],
 
     image: [
@@ -466,7 +466,7 @@ export const mockProducts: Product[] = [
     description: "Lightweight e-book reader with adjustable backlight.",
     price: 119.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "White"],
 
     image: [
@@ -482,7 +482,7 @@ export const mockProducts: Product[] = [
     description: "Compact true wireless earbuds with charging case.",
     price: 89.99,
     category: "Electronics",
-    size: [],
+    size: ["40mm", "44mm"],
     color: ["Black", "White"],
 
     image: [

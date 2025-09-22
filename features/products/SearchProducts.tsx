@@ -4,11 +4,11 @@ import { Product } from "./model";
 import ProductCard from "./ProductCard";
 import SearchTitle from "./SearchTitle";
 import { useProductStore } from "./store/productStore";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import AppButton from "@/components/buttons/AppButton";
 import { useSearchParams } from "next/navigation";
+import AppLoader from "@/components/loaders/AppLoader";
 
 const SearchProducts = () => {
   const { products, setSearchText, searchProducts, loadNextPage, isLoading } =
@@ -48,12 +48,7 @@ const SearchProducts = () => {
       </div>
 
       {isLoading ? (
-        <DotLottieReact
-          src="/assets/animations/Trail loading.lottie"
-          loop
-          autoplay
-          className="h-20 my-12"
-        />
+        <AppLoader />
       ) : (
         <motion.div
           className="py-8 flex justify-center my-12"

@@ -46,7 +46,11 @@ const PaymentMethod = () => {
   };
 
   return (
-    <motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <form onSubmit={handleSubmit(checkout)} className="space-y-4">
         <div>
           <label htmlFor="cardName">Name on card</label>

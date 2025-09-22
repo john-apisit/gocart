@@ -1,14 +1,15 @@
 import Image from "next/image";
 import TopMenu from "./TopMenu";
 import UserMenu from "./UserMenu";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <div className="border-b-2 border-gray-200 fixed top-0 left-0 right-0 bg-white/90 z-50 ">
       <div className="flex justify-between items-center max-w-5xl mx-auto py-4">
-        <div>
+        <Link href="/">
           <Image src="/logo/J Shop.png" alt="J Shop" width={100} height={33} />
-        </div>
+        </Link>
         <TopMenu />
         <UserMenu />
       </div>

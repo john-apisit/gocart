@@ -9,12 +9,13 @@ const Banner = () => {
   const router = useRouter();
   return (
     <div className="relative py-4">
-      <Image
+      <motion.img
         src="https://images.unsplash.com/photo-1574682592200-948fd815c4f0?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Banner"
-        width={1000}
-        height={300}
         className="w-full h-[300] object-cover rounded-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <motion.h3

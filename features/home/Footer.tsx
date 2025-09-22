@@ -33,15 +33,14 @@ const companyMenu: MenuItem[] = [
 const Footer = () => {
   return (
     <div>
-      <div className="border-b border-gray-200">
+      <div className="border-b border-gray-200 pt-12">
         {/* Menu */}
         <div className="grid grid-cols-4 gap-8 max-w-5xl mx-auto py-8 ">
           <div className="col-span-2 space-y-4">
-            <Image
+            <img
               src="/logo/J Shop.png"
               alt="J Shop"
-              width={100}
-              height={100}
+              className="h-10 object-cover"
             />
             <p className="text-gray-500">
               J Shop is a platform for buying and selling products online.

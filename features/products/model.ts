@@ -10,7 +10,7 @@ export type Product = {
   rating: number;
 };
 
-export const products: Product[] = [
+export const mockProducts: Product[] = [
   {
     id: "1",
     name: "Classic White T-Shirt",
@@ -494,5 +494,5 @@ export const products: Product[] = [
   },
 ];
 
-export const popularProducts = products.slice(5, 13);
-export const featuredProducts = products.slice(0, 6);
+export const popularProducts = mockProducts.slice(5, 13);
+export const featuredProducts = mockProducts.slice(0, 6);

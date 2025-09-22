@@ -46,6 +46,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
               color: product.color[0],
               size: product.size[0],
               quantity: 1,
+              product: product,
             });
           }}
           leftIcon={<ShoppingCart width={16} />}

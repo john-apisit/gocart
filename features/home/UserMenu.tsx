@@ -25,7 +25,7 @@ const UserMenu = () => {
       {/* User Actions */}
       <div className="flex items-center gap-2 cursor-pointer">
         <User className="" />
-        <span>Account</span>
+        <span>Sign in</span>
       </div>
     </div>
   );

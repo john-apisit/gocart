@@ -35,6 +35,7 @@ const SearchProducts = () => {
               key={p.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 20 }}
+              exit={{ opacity: 0, x: 20 }}
               transition={{
                 duration: 0.3,
                 delay: index * 0.1,
@@ -74,25 +75,6 @@ const SearchProducts = () => {
           />
         </motion.div>
       )}
-
-      {/* <div className="grid grid-cols-4 gap-8">
-        <AnimatePresence>
-          {displayedProducts.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{
-                duration: 0.3,
-                delay: (index % itemsPerPage) * 0.1,
-              }}
-            >
-              <ProductCard product={product} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div> */}
     </div>
   );
 };

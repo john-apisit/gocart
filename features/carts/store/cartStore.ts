@@ -1,19 +1,31 @@
+import { Product } from "@/features/products/model";
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
+import { TabId } from "../CartTabs";
+import { ShippingAddressFormData } from "../ShippingAddress";
 
 export type CartItem = {
   productId: string;
   color: string;
   size: string;
   quantity: number;
+  product: Product;
 };
 
 export type CartState = {
   cartItems: CartItem[];
   addCartItem: (item: CartItem) => void;
   getCartItemCount: () => number;
-  //   removeCartItem: (item: CartItem) => void;
-  //   clearCart: () => void;
+  removeCartItem: (item: CartItem) => void;
+  getSubTotal: () => number;
+  discount: number;
+  shippingFee: number;
+  getTotal: () => number;
+  currentTab: TabId;
+  setCurrentTab: (tab: TabId) => void;
+  shippingAddress: ShippingAddressFormData;
+  setShippingAddress: (address: ShippingAddressFormData) => void;
+  clearCart: () => void;
   //   getCartItemCount: () => number;
   //   getCartItemTotal: () => number;
 };
@@ -42,6 +54,59 @@ export const useCartStore = create<CartState>()(
         },
         getCartItemCount: () => {
           return get().cartItems.reduce((count, c) => count + c.quantity, 0);
+        },
+        removeCartItem: (item) => {
+          set((prev) => {
+            return {
+              cartItems: prev.cartItems.filter(
+                (c) =>
+                  !(
+                    c.productId === item.productId &&
+                    c.color === item.color &&
+                    c.size === item.size
+                  )
+              ),
+            };
+          });
+        },
+        getSubTotal: () => {
+          return get().cartItems.reduce(
+            (acc, c) => acc + c.product.price * c.quantity,
+            0
+          );
+        },
+        discount: 100,
+        shippingFee: 10,
+        getTotal: () => {
+          return get().getSubTotal() - get().discount + get().shippingFee;
+        },
+        currentTab: "cart",
+        setCurrentTab: (tab) => {
+          set({ currentTab: tab });
+        },
+        shippingAddress: {
+          name: "",
+          email: "",
+          phone: "",
+          address: "",
+          city: "",
+        },
+        setShippingAddress: (address) => {
+          set({ shippingAddress: address });
+        },
+        clearCart: () => {
+          set({
+            cartItems: [],
+            shippingAddress: {
+              name: "",
+              email: "",
+              phone: "",
+              address: "",
+              city: "",
+            },
+            shippingFee: 0,
+            discount: 0,
+          });
         },
       }),
       {

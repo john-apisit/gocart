@@ -4,12 +4,18 @@ const AppButton = ({
   label,
   onClick,
   leftIcon,
+  rightIcon,
   size = "md",
+  className,
+  type,
 }: {
   label: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   leftIcon?: ReactNode;
+  rightIcon?: ReactNode;
   size: "sm" | "md" | "lg";
+  className?: string;
+  type?: "button" | "submit";
 }) => {
   const sizeClasses = {
     sm: "px-2 py-1",
@@ -24,10 +30,12 @@ const AppButton = ({
   return (
     <button
       onClick={onClick}
-      className={`${sizeClasses[size]} cursor-pointer rounded-md flex items-center gap-2 bg-orange-500 text-white hover:bg-orange-400 transition-all duration-100`}
+      className={`${sizeClasses[size]} cursor-pointer rounded-md flex items-center justify-center gap-2 bg-orange-500 text-white hover:bg-orange-400 transition-all duration-100 ${className}`}
+      type={type}
     >
       {leftIcon}
       <p className={textSizeClasses[size]}>{label}</p>
+      {rightIcon}
     </button>
   );
 };

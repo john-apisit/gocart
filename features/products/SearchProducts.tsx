@@ -49,7 +49,7 @@ const SearchProducts = () => {
 
       {isLoading ? (
         <DotLottieReact
-          src="/assets/animations/loading.lottie"
+          src="/assets/animations/Trail loading.lottie"
           loop
           autoplay
           className="h-20 my-12"
@@ -68,7 +68,8 @@ const SearchProducts = () => {
         >
           <AppButton
             label="Load More"
-            size="md"
+            size="sm"
+            color="white"
             onClick={() => {
               loadNextPage();
             }}
